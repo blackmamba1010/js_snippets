@@ -47,23 +47,66 @@
 
 // arrow function
 
-const power = (base, exponent) => {
-    let result = 1;
-    for(let count = 0; count < exponent; count++){
-        result *= base;
-    }
-    return result;
-};
+// const power = (base, exponent) => {
+//     let result = 1;
+//     for(let count = 0; count < exponent; count++){
+//         result *= base;
+//     }
+//     return result;
+// };
 
-console.log(power(2,3)); // 8
+// console.log(power(2,3)); // 8
 
 // call stack
 
-function chicken(){
-    return egg();
-}
-function egg(){
-    return chicken();
-}
+// function chicken(){
+//     return egg();
+// }
+// function egg(){
+//     return chicken();
+// }
 
-console.log(chicken() + "came first"); // RangeError: maximum call stack size exceeded
+// console.log(chicken() + "came first"); // RangeError: maximum call stack size exceeded
+
+// let day1 = {
+//     squirrel: false,
+//     events: ["work", "touched tree", "pizza", "running"]
+// };
+
+// console.log(day1.squirrel);
+// let description = {
+//     work: "went to work",
+//     "touch tree": "Touch a tree"
+// };
+
+// describe oop with function
+
+// function Person(name, age, salary){
+//     this.name = name;
+//     this.age = age;
+//     this.salary = salary;
+//     this.print = function (){
+//         console.log(`${this.name} ${this.age} ${this.salary}`);
+//     }
+// }
+
+// let person1 = new Person("phuoc", 26, 7000);
+// console.log(typeof person1);
+// person1.print();
+
+// describe oop with class in ES6
+class Person{
+    constructor(name, age, salary){
+        this.name = name;
+        this.age = age;
+        this.salary = salary;
+  
+    }
+    print(){
+        console.log(`${this.name} ${this.age} ${this.salary}`);
+    
+    }
+};
+let person2 = new Person("Tuyen", 24, 7000);
+person2.print();
+console.log(`Hello ${person2.print()}`);
