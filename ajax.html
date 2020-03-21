@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example about Ajax with vanilla JS</title>
+</head>
+<body>
+    <div class="result">
+        Test ajax
+    </div>
+    <script>
+        function ajaxCall(){
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState == 4) {
+                    document.getElementById('result').innerHTML = xhr.responseText;
+                }
+            };
+            xhr.open('GET', 'https://google.com');
+            xhr.send();
+        }
+    </script>
+</body>
+</html>

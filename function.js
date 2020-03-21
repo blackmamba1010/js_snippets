@@ -110,3 +110,21 @@ class Person{
 let person2 = new Person("Tuyen", 24, 7000);
 person2.print();
 console.log(`Hello ${person2.print()}`);
+
+// excercise
+// minimum function
+function minimum (a, b) {
+    return a < b? a: b
+};
+console.log(minimum(-3, -5));
+
+// recursion
+function isEven (a) {
+    if (a < 0) {
+        a = -a;
+    }
+    if (a == 0) return true;
+    else if (a == 1) return false;
+    else return isEven(a-2);
+}
+console.log(isEven(-1));
