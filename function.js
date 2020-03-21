@@ -128,3 +128,13 @@ function isEven (a) {
     else return isEven(a-2);
 }
 console.log(isEven(-1));
+
+// bean counting
+function countChar (string, char) {
+    let count = 0;
+    for (let i = 0; i < string.length; i++) {
+        if (char == string[i]) count += 1;
+    }
+    return count;
+}
+console.log(countChar('HelloHelloHelloHello', 'H'));
